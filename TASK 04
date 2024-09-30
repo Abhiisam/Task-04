@@ -1,0 +1,72 @@
+using the python's object oriented programming scheme(oops) kindly complete the following tasks which is given as below:-
+
+1: create a python class called circle with constructor which will take a list as an argument for the task. The list is [10,501,22,37,100,999,87,351]
+
+import math
+
+class Circle:
+    def __init__(self, radius_list):
+        self.radius_list = radius_list
+
+    def calculate_area(self):
+        return [math.pi * radius ** 2 for radius in self.radius_list]
+
+    def calculate_circumference(self):
+        return [2 * math.pi * radius for radius in self.radius_list]
+
+# Example usage:
+radii = [10, 501, 22, 37, 100, 999, 87, 351]
+circle_instance = Circle(radii)
+
+areas = circle_instance.calculate_area()
+print("Areas of circles:", areas)
+
+circumferences = circle_instance.calculate_circumference()
+print("Circumferences of circles:", circumferences)
+
+2: create proper member variables inside the task if required and use them when necessary. for example for this task create a class private variable named pi=3.141 
+
+class Circle:
+    def __init__(self, radius_list):
+        self._pi = 3.141  # Private member variable for pi
+        self._radius_list = radius_list
+
+    def calculate_area(self):
+        return [self._pi * radius ** 2 for radius in self._radius_list]
+
+    def calculate_circumference(self):
+        return [2 * self._pi * radius for radius in self._radius_list]
+
+# Example usage:
+radii = [10, 501, 22, 37, 100, 999, 87, 351]
+circle_instance = Circle(radii)
+
+areas = circle_instance.calculate_area()
+print("Areas of circles:", areas)
+
+circumferences = circle_instance.calculate_circumference()
+print("Circumferences of circles:", circumferences)
+
+3: from the given list [10,501,22,37,100,999,87,351] create two class methods area and perimeter which will be going to calculate the area and perimeter
+
+import math
+
+class Circle:
+    def __init__(self, radius_list):
+        self.radius_list = radius_list
+
+    def calculate_area(self):
+        return [math.pi * radius ** 2 for radius in self.radius_list]
+
+    def calculate_perimeter(self):
+        return [2 * math.pi * radius for radius in self.radius_list]
+
+# Example usage:
+radii = [10, 501, 22, 37, 100, 999, 87, 351]
+circle_instance = Circle(radii)
+
+areas = circle_instance.calculate_area()
+print("Areas of circles:", areas)
+
+perimeters = circle_instance.calculate_perimeter()
+print("Perimeters of circles:", perimeters)
